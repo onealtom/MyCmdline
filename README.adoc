@@ -82,7 +82,7 @@ $ tar -czf U-Boot.tar.gz u-boot/
 ----
 
 
-==搜索
+== 搜索
 
 [source,bash]
 ----
