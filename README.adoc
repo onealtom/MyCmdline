@@ -69,6 +69,7 @@ $ git checkout -b mybranch  <1>
 [source,bash]
 ----
 $ git config --global alias.lg 'log --graph --oneline --decorate --date=relative --all'
+$ git config --global core.editor "vim"
 ----
 
 == 压缩/解压缩
