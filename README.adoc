@@ -78,8 +78,8 @@ $ git config --global core.editor "vim"
 
 [source,bash]
 ----
-$ tar -czf U-Boot.tar.gz u-boot/
-
+$ tar -czf U-Boot.tar.gz u-boot/  # 压缩
+$ tar -zxf U-Boot.tar.gz # 解压缩
 ----
 
 
