@@ -87,14 +87,17 @@ $ tar -zxf U-Boot.tar.gz # 解压缩
 
 [source,bash]
 ----
-grep -rn --include="*.h" 'getenv' ./*
+$ grep -rn --include="*.h" 'getenv' ./*
 ----
 
 
 
 
-
-
+== make xconfig
+[source,bash]
+----
+$ sudo apt-get install qttools5-dev
+----
 
 
 
