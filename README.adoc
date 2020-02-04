@@ -99,5 +99,9 @@ $ grep -rn --include="*.h" 'getenv' ./*
 $ sudo apt-get install qttools5-dev
 ----
 
-
+== 中文系统中强制使用英文显示
+[source,bash]
+----
+$ LANG=en_US make
+----
 
