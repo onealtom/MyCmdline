@@ -70,6 +70,7 @@ $ git checkout -b mybranch  <1>
 ----
 $ git config --global alias.lg 'log --graph --oneline --decorate --date=relative --all'
 $ git config --global core.editor "vim"
+$ git config --global alias.meld 'difftool -t meld --dir-diff'
 ----
 
 == 压缩/解压缩
