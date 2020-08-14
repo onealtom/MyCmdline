@@ -114,3 +114,9 @@ find output/ -name ".stamp_target_installed" |xargs rm -rf
 /usr/lib/os-release
 ----
 
+== Docker
+
+----
+docker run --rm -v $(pwd):/home/vivado/workspace vavitel/vivadosdk2017p2 make
+docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix cangcanglang/firefox
+----
