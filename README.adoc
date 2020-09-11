@@ -19,10 +19,10 @@ GPIOs 64-95, DaVinci:
  gpio-66  (usb                 ) out lo
 
 GPIOs 96-103, DaVinci:
+----
 
 ==== 系统管理
 
-----
 [source,bash]
 ----
 du -sh /*
