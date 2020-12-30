@@ -129,4 +129,12 @@ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix cangcan
 docker run -i -t -d ubuntu:latest
 docker run -ti --rm -v $(pwd):/home/vivado ubuntu:mysandbox
 docker run --rm -v $(pwd):/home/vivado
+
+$ docker run -itd ubuntu /bin/bash
+5f3824c9101b1222d201346d5a0a6a0acf24a143a149edabe5b096cd1a541c6b
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS         PORTS     NAMES
+5f3824c9101b   ubuntu    "/bin/bash"   5 seconds ago   Up 5 seconds             crazy_burnell
+$ docker attach 5f3824c9101b
+root@5f3824c9101b:/#
 ----
