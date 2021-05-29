@@ -115,6 +115,7 @@ $ LANG=en_US make
 
 == buildroot
 
+[source,bash]
 ----
 rm -rf output/target
 find output/ -name ".stamp_target_installed" |xargs rm -rf
@@ -123,6 +124,7 @@ find output/ -name ".stamp_target_installed" |xargs rm -rf
 
 == Docker
 
+[source,bash]
 ----
 docker run --rm -v $(pwd):/home/vivado/workspace vavitel/vivadosdk2017p2 make
 docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix cangcanglang/firefox
@@ -137,4 +139,11 @@ CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS         PORTS     
 5f3824c9101b   ubuntu    "/bin/bash"   5 seconds ago   Up 5 seconds             crazy_burnell
 $ docker attach 5f3824c9101b
 root@5f3824c9101b:/#
+----
+
+== about fs
+
+[source,bash]
+----
+$ sudo mount -t ext4 -o loop rootfs.ext2 mnt/
 ----
