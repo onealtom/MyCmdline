@@ -147,3 +147,9 @@ root@5f3824c9101b:/#
 ----
 $ sudo mount -t ext4 -o loop rootfs.ext2 mnt/
 ----
+
+
+[source,bash]
+----
+$ sudo dd bs=4M if=path/to/os.img of=/dev/sdb conv=fsync
+----
