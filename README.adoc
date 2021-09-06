@@ -69,9 +69,10 @@ $ awk  -F ','  '{cmd="iio_reg ad9545-lpc "$1" "$2; system(cmd) }' reg_map.txt # 
 ----
 $ git clone -b 2015_R2 --depth=1 https://github.com/analogdevicesinc/linux.git
 $ git checkout -b mybranch  <1>
+git ls-tree -r master --name-only packages/apps/security/ <2>
 ----
 <1> 不要在原始分支上修改，新建自己的分支，方便以后merge上游更新 
-
+<2> git 查看跟踪的文件
 
 [source,bash]
 ----
