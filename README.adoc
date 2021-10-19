@@ -154,3 +154,11 @@ $ sudo mount -t ext4 -o loop rootfs.ext2 mnt/
 ----
 $ sudo dd bs=4M if=path/to/os.img of=/dev/sdb conv=fsync
 ----
+
+
+== DEBUG
+
+[source,bash]
+----
+$ strace -f -F -o strace.log  rm /etc/config/ddns
+----
