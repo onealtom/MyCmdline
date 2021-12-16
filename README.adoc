@@ -164,3 +164,25 @@ $ strace -f -F -o strace.log  rm /etc/config/ddns
 
 $ echo 8 > /proc/sys/kernel/printk
 ----
+
+== 查看GLIBC 版本
+
+[source,bash]
+----
+$ find -name libc.so.6
+./aarch64-none-linux-gnu/libc/lib64/libc.so.6
+$ strings ./aarch64-none-linux-gnu/libc/lib64/libc.so.6 | grep GLIBC_
+GLIBC_2.17
+GLIBC_2.18
+GLIBC_2.22
+GLIBC_2.23
+GLIBC_2.24
+GLIBC_2.25
+GLIBC_2.26
+GLIBC_2.27
+GLIBC_2.28
+GLIBC_2.29
+GLIBC_2.30
+GLIBC_PRIVATE
+......
+----
