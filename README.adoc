@@ -195,3 +195,10 @@ GLIBC_2.30
 GLIBC_PRIVATE
 ......
 ----
+
+== GREP
+
+[source,bash]
+----
+$ grep -rn --binary-files=text -e "7e45688"
+----
