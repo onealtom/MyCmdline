@@ -200,5 +200,5 @@ GLIBC_PRIVATE
 
 [source,bash]
 ----
-$ grep -rn --binary-files=text -e "7e45688"
+$ grep -rn --binary-files=text -e "7e45688" # 二进制中搜索文本并显示
 ----
