@@ -88,6 +88,7 @@ $ git ls-tree -r master --name-only packages/apps/security/ <2>
 $ git config --global alias.lg 'log --graph --oneline --decorate --date=relative --all'
 $ git config --global core.editor "vim"
 $ git config --global alias.meld 'difftool -t meld --dir-diff'
+$ git -c protocol.file.allow=always submodule add  ../u-boot-xlnx u-boot-xlnx
 ----
 
 == 压缩/解压缩
