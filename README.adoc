@@ -5,6 +5,8 @@
 [source,bash]
 ----
 $ mount -t debugfs none /sys/kernel/debug
+$ mount -t debugfs nodev /sys/kernel/debug
+$ cat /sys/kernel/debug/clk/clk_summary
 $ cat /sys/kernel/debug/gpio
 GPIOs 0-31, DaVinci:
  gpio-22  (sysfs               ) in  lo
