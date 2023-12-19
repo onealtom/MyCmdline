@@ -70,15 +70,17 @@ sed -i 's/\r//g' script.sh
 ----
 $ awk  -F ','  '{cmd="iio_reg ad9545-lpc "$1" "$2; system(cmd) }' reg_map.txt # <1>
 ----
+<1> awk命令从txt文件中逐行取出来按逗号分割出两个的参数，然后传递给iio_reg ad9545-lpc 
+
 
 ==== 删除所有注释
+
+[source,]
 ----
 $ sed 's:#.*$::g' defconfig # 删除所有注释
 $ sed -i 's:#.*$::g' defconfig # 删除所有注释写文件
 $ grep -v '^\s*$' defconfig > defconfig_new  # 删除所有空行
 ----
-
-<1> awk命令从txt文件中逐行取出来按逗号分割出两个的参数，然后传递给iio_reg ad9545-lpc 
 
 == git
 
