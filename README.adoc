@@ -225,3 +225,25 @@ GLIBC_PRIVATE
 ----
 $ grep -rn --binary-files=text -e "7e45688" # 二进制中搜索文本并显示
 ----
+
+== 火焰图
+
+[source,bash]
+----
+$ perf record -p pid -F 99 --call-graph dwarf -o perf.data
+$ perf script -i perf.data > out.perf
+$ git clone https://github.com/brendangregg/FlameGraph.git
+$ ./FlameGraph/stackcollapse-perf.pl out.perf > out.folded
+$ ./FlameGraph/flamegraph.pl out.folded > flamegraph.svg
+----
+
+== kernel火焰图
+
+[source,bash]
+----
+$ perf script -k /mnt/linux-xlnx/vmlinux -i perf.data &> perf.unfold
+$ ./FlameGraph/stackcollapse-perf.pl perf.unfold &> perf.folded
+$ ./FlameGraph/flamegraph.pl perf.folded > perf.svg
+----
+
+
